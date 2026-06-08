@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agence Chic Local | Communication digitale pour boutiques de mode</title>
+    <title>
+      Agence Chic Local | Communication digitale pour boutiques de mode
+    </title>
     <meta
       name="description"
       content="Agence Chic Local aide les boutiques de mode à Cotonou à mieux se présenter en ligne, produire du contenu plus vendeur et transformer leur visibilité en demandes réelles."
@@ -20,11 +22,21 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="fr_BJ" />
+    <meta property="og:site_name" content="Agence Chic Local" />
     <meta property="og:image" content="images/logo.jpeg" />
     <meta property="og:image:alt" content="Logo Agence Chic Local" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Agence Chic Local | Communication digitale pour boutiques de mode"
+    />
+    <meta
+      name="twitter:description"
+      content="Audit, contenu visuel, réseaux sociaux et accompagnement local pour boutiques de mode à Cotonou."
+    />
     <link rel="icon" href="images/logo.jpeg" type="image/jpeg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap"
       rel="stylesheet"
@@ -39,7 +51,7 @@
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
         "name": "Agence Chic Local",
-        "areaServed": "Cotonou, Benin",
+        "areaServed": "Cotonou, Bénin",
         "description": "Agence de communication digitale pour boutiques de mode, vêtements et accessoires.",
         "email": "dossouodette57@gmail.com",
         "telephone": "+2290167984110",
@@ -63,9 +75,13 @@
     >
 
     <header class="site-header">
-      <!-- NAV -->
       <nav aria-label="Navigation principale">
-        <a href="#accueil" class="logo" aria-label="Accueil Agence Chic Local">
+        <a
+          href="#accueil"
+          class="logo"
+          id="navLogo"
+          aria-label="Accueil Agence Chic Local"
+        >
           <span class="logo-box">
             <img
               src="images/logo.jpeg"
@@ -77,35 +93,40 @@
           </span>
           <span class="logo-name">Agence Chic Local</span>
         </a>
-      <ul class="nav-menu">
-        <li><a href="#services" id="nav-services">Services</a></li>
-        <li><a href="#portfolio" id="nav-portfolio">Portfolio</a></li>
-        <li><a href="#tarifs" id="nav-tarifs">Tarifs</a></li>
-        <li><a href="#faq" id="nav-faq">FAQ</a></li>
-        <li><a href="#temoignages" id="nav-testi">Témoignages</a></li>
-        <li><a href="#contact" class="nav-cta" id="nav-contact">Contact</a></li>
-      </ul>
-      <div class="nav-actions">
-        <button
-          type="button"
-          class="lang-toggle"
-          id="langBtn"
-          aria-label="Basculer le site en anglais"
-        >
-          EN</button
-        ><button
-          type="button"
-          class="hamburger"
-          id="hamburgerBtn"
-          aria-label="Ouvrir le menu"
-          aria-expanded="false"
-          aria-controls="mobileMenu"
-        >
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+
+        <ul class="nav-menu">
+          <li><a href="#services" id="nav-services">Services</a></li>
+          <li><a href="#portfolio" id="nav-portfolio">Portfolio</a></li>
+          <li><a href="#tarifs" id="nav-tarifs">Tarifs</a></li>
+          <li><a href="#faq" id="nav-faq">FAQ</a></li>
+          <li><a href="#temoignages" id="nav-testi">Témoignages</a></li>
+          <li>
+            <a href="#contact" class="nav-cta" id="nav-contact">Contact</a>
+          </li>
+        </ul>
+
+        <div class="nav-actions">
+          <button
+            type="button"
+            class="lang-toggle"
+            id="langBtn"
+            aria-label="Basculer le site en anglais"
+          >
+            EN
+          </button>
+          <button
+            type="button"
+            class="hamburger"
+            id="hamburgerBtn"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </nav>
-      <!-- MOBILE MENU -->
+
       <div
         class="mobile-menu"
         id="mobileMenu"
@@ -120,513 +141,682 @@
         <a href="#contact" id="mnav-contact">Nous contacter</a>
       </div>
 
-    <!-- HERO -->
-    <section class="hero" id="accueil">
-      <div class="hero-decor1"></div>
-      <div class="hero-decor2"></div>
-      <div class="hero-decor3"></div>
-      <div class="hero-bar"></div>
-      <p class="hero-tag" id="h-tag">Agence de communication digitale locale</p>
-      <h1 id="h-title">
-        La visibilité en ligne que<br /><em>vos boutiques</em> méritent
-      </h1>
-      <p class="hero-sub" id="h-sub">
-        Nous aidons les petites boutiques de vêtements et d'accessoires à
-        trouver leurs clients en ligne, vendre davantage et bâtir une communauté
-        fidèle.
-      </p>
-      <div class="hero-btns">
-        <a href="#contact" class="btn-gold" id="h-btn1"
-          >Démarrer mon audit gratuit</a
-        >
-        <a href="#services" class="btn-ghost" id="h-btn2"
-          >Découvrir nos services</a
-        >
-      </div>
-      <div class="hero-stats">
-        <div class="stat-item">
-          <span class="stat-num">50+</span
-          ><span class="stat-txt" id="s1">Boutiques accompagnées</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">3×</span
-          ><span class="stat-txt" id="s2">Ventes en plus en moyenne</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">98%</span
-          ><span class="stat-txt" id="s3">Clients satisfaits</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">24h</span
-          ><span class="stat-txt" id="s4">Délai de réponse</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section class="services-bg" id="services">
-      <div class="section-inner">
-        <p class="section-label" id="sec1-label">Ce que nous faisons</p>
-        <h2 class="section-title" id="sec1-title">Nos services</h2>
-        <div class="section-bar"></div>
-        <p class="section-intro" id="sec1-intro">
-          Tout ce dont votre boutique a besoin pour rayonner en ligne et trouver
-          de nouvelles clientes.
+      <section class="hero" id="accueil">
+        <div class="hero-decor1"></div>
+        <div class="hero-decor2"></div>
+        <div class="hero-decor3"></div>
+        <div class="hero-bar"></div>
+        <p class="hero-tag" id="h-tag">
+          Communication digitale pour boutiques de mode à Cotonou
         </p>
-        <div class="services-grid">
-          <div class="service-item">
-            <div class="svc-num">01</div>
-            <span class="svc-icon"><i class="fab fa-instagram"></i></span>
-            <h3 id="sv1-t">Gestion Réseaux Sociaux</h3>
-            <p id="sv1-p">
-              Instagram, Facebook & WhatsApp Business — gestion complète de vos
-              pages, création de posts, stories et reels pour faire grandir
-              votre communauté.
-            </p>
-          </div>
-          <div class="service-item">
-            <div class="svc-num">02</div>
-            <span class="svc-icon"><i class="fas fa-camera"></i></span>
-            <h3 id="sv2-t">Contenus Visuels Mode</h3>
-            <p id="sv2-p">
-              Photos produits professionnelles, reels tendance, lookbooks
-              saisonniers — des visuels qui donnent envie d'acheter
-              immédiatement.
-            </p>
-          </div>
-          <div class="service-item">
-            <div class="svc-num">03</div>
-            <span class="svc-icon"><i class="fas fa-bullseye"></i></span>
-            <h3 id="sv3-t">Publicités Ciblées</h3>
-            <p id="sv3-p">
-              Campagnes Meta Ads & WhatsApp sponsorisé pour toucher les clientes
-              potentielles de votre quartier, ville et au-delà.
-            </p>
-          </div>
-          <div class="service-item">
-            <div class="svc-num">04</div>
-            <span class="svc-icon"><i class="fas fa-globe"></i></span>
-            <h3 id="sv4-t">Site Vitrine & SEO</h3>
-            <p id="sv4-p">
-              Présence professionnelle en ligne, Google My Business optimisé,
-              référencement local pour être trouvée facilement sur Google.
-            </p>
-          </div>
-          <div class="service-item">
-            <div class="svc-num">05</div>
-            <span class="svc-icon"><i class="fas fa-shopping-bag"></i></span>
-            <h3 id="sv5-t">Catalogue en Ligne</h3>
-            <p id="sv5-p">
-              Catalogues produits WhatsApp, Instagram Shopping et pages boutique
-              pour vendre 24h/24 sans se déplacer.
-            </p>
-          </div>
-          <div class="service-item">
-            <div class="svc-num">06</div>
-            <span class="svc-icon"><i class="fas fa-chart-line"></i></span>
-            <h3 id="sv6-t">Stratégie & Conseil</h3>
-            <p id="sv6-p">
-              Audit de présence digitale, plan de communication personnalisé et
-              accompagnement mensuel pour une croissance durable.
-            </p>
+        <h1 id="h-title">
+          La visibilité en ligne que<br /><em>vos boutiques</em> méritent
+        </h1>
+        <p class="hero-sub" id="h-sub">
+          Nous aidons les petites boutiques de vêtements et d'accessoires à
+          mieux se présenter en ligne, publier avec régularité et transformer
+          leur visibilité en demandes concrètes.
+        </p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-gold" id="h-btn1">Demander un audit</a>
+          <a href="#services" class="btn-ghost" id="h-btn2"
+            >Découvrir nos services</a
+          >
+        </div>
+        <div class="hero-trust">
+          <p class="hero-trust-title" id="trust-title">
+            Ce que vous gagnez dès le départ
+          </p>
+          <ul class="hero-trust-list" aria-labelledby="trust-title">
+            <li class="trust-pill" id="trust-1">
+              Audit clair et priorités d'action
+            </li>
+            <li class="trust-pill" id="trust-2">Réponse sous 24h</li>
+            <li class="trust-pill" id="trust-3">Contenus pensés pour vendre</li>
+            <li class="trust-pill" id="trust-4">
+              Accompagnement local à Cotonou
+            </li>
+          </ul>
+        </div>
+      </section>
+    </header>
+
+    <main id="main-content">
+      <section class="services-bg" id="services">
+        <div class="section-inner">
+          <p class="section-label" id="sec1-label">Ce que nous faisons</p>
+          <h2 class="section-title" id="sec1-title">Nos services</h2>
+          <div class="section-bar"></div>
+          <p class="section-intro" id="sec1-intro">
+            Une base claire, du contenu qui rassure et un dispositif pensé pour
+            transformer la visibilité en demandes concrètes.
+          </p>
+          <div class="services-grid">
+            <article class="service-item">
+              <div class="svc-num">01</div>
+              <span class="svc-icon"><i class="fab fa-instagram"></i></span>
+              <h3 id="sv1-t">Gestion réseaux sociaux</h3>
+              <p id="sv1-p">
+                Instagram, Facebook et WhatsApp Business : gestion des pages,
+                calendrier éditorial, posts, stories et reels pour publier avec
+                cohérence.
+              </p>
+            </article>
+            <article class="service-item">
+              <div class="svc-num">02</div>
+              <span class="svc-icon"><i class="fas fa-camera"></i></span>
+              <h3 id="sv2-t">Contenus visuels mode</h3>
+              <p id="sv2-p">
+                Photos produits, reels, mini-séances en boutique et visuels
+                adaptés à vos pièces pour que vos produits paraissent plus
+                désirables.
+              </p>
+            </article>
+            <article class="service-item">
+              <div class="svc-num">03</div>
+              <span class="svc-icon"><i class="fas fa-bullseye"></i></span>
+              <h3 id="sv3-t">Publicités ciblées</h3>
+              <p id="sv3-p">
+                Campagnes Meta Ads et WhatsApp sponsorisé pour toucher des
+                clientes pertinentes, au bon endroit et avec le bon message.
+              </p>
+            </article>
+            <article class="service-item">
+              <div class="svc-num">04</div>
+              <span class="svc-icon"><i class="fas fa-globe"></i></span>
+              <h3 id="sv4-t">Site vitrine et SEO local</h3>
+              <p id="sv4-p">
+                Une présence en ligne propre, une fiche Google mieux présentée
+                et une base solide pour être trouvée plus facilement.
+              </p>
+            </article>
+            <article class="service-item">
+              <div class="svc-num">05</div>
+              <span class="svc-icon"><i class="fas fa-shopping-bag"></i></span>
+              <h3 id="sv5-t">Catalogue en ligne</h3>
+              <p id="sv5-p">
+                Catalogues WhatsApp, pages produit et organisation des offres
+                pour répondre plus vite et vendre sans friction inutile.
+              </p>
+            </article>
+            <article class="service-item">
+              <div class="svc-num">06</div>
+              <span class="svc-icon"><i class="fas fa-chart-line"></i></span>
+              <h3 id="sv6-t">Stratégie et conseil</h3>
+              <p id="sv6-p">
+                Audit de présence digitale, priorités d'action et accompagnement
+                régulier pour éviter les efforts dispersés.
+              </p>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- PORTFOLIO -->
-    <section class="portfolio-bg" id="portfolio">
-      <div class="section-inner">
-        <p class="section-label section-label-muted" id="sec2-label">
-          Nos réalisations
-        </p>
-        <h2 class="section-title section-title-dark" id="sec2-title">
-          Portfolio
-        </h2>
-        <div class="section-bar"></div>
-        <div class="portfolio-grid">
-          <div class="port-card">
-            <div class="port-banner port-banner-media">
-              <img
-                src="images/portfolio-social-media.jpeg"
-                alt="Boutique Kemi Mode — Réseaux Sociaux"
-                class="port-image-full port-image-dim"
-              />
-            </div>
-            <div class="port-body">
-              <span class="port-tag" id="p1-tag">Réseaux Sociaux</span>
-              <h3 id="p1-t">Boutique Kemi Mode</h3>
-              <p id="p1-p">
-                Gestion complète Instagram + création de contenus visuels.
-                Stratégie éditoriale mensuelle.
-              </p>
-              <p class="port-result" id="p1-r">
-                Résultat : <span>×3 clientes en 3 mois</span>
-              </p>
-            </div>
-          </div>
-          <div class="port-card">
-            <div class="port-banner port-banner-media">
-              <img
-                src="images/portfolio-video-content.jpeg"
-                alt="Ama Style Boutique — Contenus vidéo"
-                class="port-image-full port-image-dim"
-              />
-            </div>
-            <div class="port-body">
-              <span class="port-tag" id="p2-tag">Pub Digitale</span>
-              <h3 id="p2-t">Ama Style Boutique</h3>
-              <p id="p2-p">
-                Catalogue WhatsApp Business + campagnes Meta Ads ciblées sur la
-                zone de chalandise.
-              </p>
-              <p class="port-result" id="p2-r">
-                Résultat : <span>×4 ventes en ligne</span>
-              </p>
-            </div>
-          </div>
-          <div class="port-card">
-            <div class="port-banner port-banner-media">
-              <div class="port-compare">
+      <section class="portfolio-bg" id="portfolio">
+        <div class="section-inner">
+          <p class="section-label section-label-muted" id="sec2-label">
+            Nos réalisations
+          </p>
+          <h2 class="section-title section-title-dark" id="sec2-title">
+            Portfolio
+          </h2>
+          <div class="section-bar"></div>
+          <p class="section-intro" id="sec2-intro">
+            Des exemples concrets de contenus, de tournages et de mise en valeur
+            produit pensés pour des boutiques de mode locales.
+          </p>
+          <div class="portfolio-grid">
+            <article class="port-card">
+              <div class="port-banner port-banner-media">
                 <img
-                  src="images/portfolio-before.jpeg"
-                  alt="Avant — photo basique"
-                  class="port-compare-image port-compare-image-before"
+                  src="images/portfolio-social-media.jpeg"
+                  alt="Contenu social pour une boutique de mode"
+                  class="port-image-full port-image-dim"
+                  loading="lazy"
                 />
+              </div>
+              <div class="port-body">
+                <span class="port-tag" id="p1-tag">Contenu social</span>
+                <h3 id="p1-t">Production Instagram boutique</h3>
+                <p id="p1-p">
+                  Captation et mise en scène de produits pour renforcer
+                  l'identité visuelle de la boutique et alimenter reels, stories
+                  et publications.
+                </p>
+                <p class="port-result" id="p1-r">
+                  Résultat :
+                  <span>des contenus cohérents, prêts à publier</span>
+                </p>
+              </div>
+            </article>
+
+            <article class="port-card">
+              <div class="port-banner port-banner-media">
                 <img
-                  src="images/portfolio-after.jpeg"
-                  alt="Après — photo professionnelle"
-                  class="port-compare-image port-compare-image-after"
+                  src="images/portfolio-video-content.jpeg"
+                  alt="Tournage vidéo dans une boutique"
+                  class="port-image-full port-image-dim"
+                  loading="lazy"
                 />
-                <div class="port-compare-label port-compare-label-before">
-                  Avant
+              </div>
+              <div class="port-body">
+                <span class="port-tag" id="p2-tag">Tournage vidéo</span>
+                <h3 id="p2-t">Captation en boutique</h3>
+                <p id="p2-p">
+                  Tournage sur place, mise en avant des pièces et création de
+                  séquences réutilisables pour reels, stories et campagnes
+                  sponsorisées.
+                </p>
+                <p class="port-result" id="p2-r">
+                  Résultat :
+                  <span
+                    >une matière vidéo exploitable sur plusieurs formats</span
+                  >
+                </p>
+              </div>
+            </article>
+
+            <article class="port-card">
+              <div class="port-banner port-banner-media">
+                <div class="port-compare">
+                  <img
+                    src="images/portfolio-before.jpeg"
+                    alt="Avant : photo produit sombre"
+                    class="port-compare-image port-compare-image-before"
+                    loading="lazy"
+                  />
+                  <img
+                    src="images/portfolio-after.jpeg"
+                    alt="Après : photo produit mieux mise en valeur"
+                    class="port-compare-image port-compare-image-after"
+                    loading="lazy"
+                  />
+                  <div class="port-compare-label port-compare-label-before">
+                    Avant
+                  </div>
+                  <div class="port-compare-label port-compare-label-after">
+                    Après
+                  </div>
+                  <div class="port-compare-divider"></div>
                 </div>
-                <div class="port-compare-label port-compare-label-after">
-                  Après ✨
-                </div>
-                <div class="port-compare-divider"></div>
               </div>
-            </div>
-            <div class="port-body">
-              <span class="port-tag" id="p3-tag">Site Web & SEO</span>
-              <h3 id="p3-t">Glamour Loc Accessories</h3>
-              <p id="p3-p">
-                Site vitrine + SEO local + Google My Business optimisé et fiche
-                produits complète.
+              <div class="port-body">
+                <span class="port-tag" id="p3-tag">Photo produit</span>
+                <h3 id="p3-t">Avant / après mise en valeur</h3>
+                <p id="p3-p">
+                  Exemple simple de mise en valeur produit : meilleure lumière,
+                  meilleur cadrage et rendu plus premium pour présenter
+                  l'article avec plus de sérieux en ligne.
+                </p>
+                <p class="port-result" id="p3-r">
+                  Résultat :
+                  <span>un visuel plus vendeur et plus crédible</span>
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="process-bg" id="process">
+        <div class="section-inner">
+          <p class="section-label" id="sec3-label">Comment ça marche</p>
+          <h2 class="section-title" id="sec3-title">
+            Une méthode simple pour avancer proprement
+          </h2>
+          <div class="section-bar"></div>
+          <p class="section-intro" id="sec3-intro">
+            Pas de dispersion, pas d'actions au hasard : on clarifie d'abord,
+            puis on exécute.
+          </p>
+          <div class="steps">
+            <article class="step">
+              <div class="step-num">01</div>
+              <h3 id="st1-t">Audit initial</h3>
+              <p id="st1-p">
+                On regarde votre présence actuelle, vos points faibles et ce qui
+                bloque vraiment la visibilité ou la conversion.
               </p>
-              <p class="port-result" id="p3-r">
-                Résultat : <span>Page 1 Google en 6 semaines</span>
+            </article>
+            <article class="step">
+              <div class="step-num">02</div>
+              <h3 id="st2-t">Priorités claires</h3>
+              <p id="st2-p">
+                On définit le bon niveau d'accompagnement selon vos objectifs,
+                vos moyens et le type de contenus à produire.
               </p>
-            </div>
+            </article>
+            <article class="step">
+              <div class="step-num">03</div>
+              <h3 id="st3-t">Production et diffusion</h3>
+              <p id="st3-p">
+                On produit les contenus utiles, on structure vos canaux et on
+                met en ligne ce qui doit réellement servir votre boutique.
+              </p>
+            </article>
+            <article class="step">
+              <div class="step-num">04</div>
+              <h3 id="st4-t">Suivi et ajustements</h3>
+              <p id="st4-p">
+                On mesure ce qui attire, ce qui rassure et ce qui convertit pour
+                corriger rapidement ce qui n'est pas assez solide.
+              </p>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- PROCESS -->
-    <section class="process-bg" id="process">
-      <div class="section-inner">
-        <p class="section-label" id="sec3-label">Comment ça marche</p>
-        <h2 class="section-title" id="sec3-title">
-          Notre approche en 4 étapes
-        </h2>
-        <div class="section-bar"></div>
-        <div class="steps">
-          <div class="step">
-            <div class="step-num">01</div>
-            <h3 id="st1-t">Audit gratuit</h3>
-            <p id="st1-p">
-              On analyse votre présence digitale actuelle et identifions
-              ensemble les meilleures opportunités pour votre boutique.
-            </p>
-          </div>
-          <div class="step">
-            <div class="step-num">02</div>
-            <h3 id="st2-t">Stratégie sur mesure</h3>
-            <p id="st2-p">
-              On crée un plan de communication personnalisé adapté à votre type
-              de boutique, vos objectifs et votre budget.
-            </p>
-          </div>
-          <div class="step">
-            <div class="step-num">03</div>
-            <h3 id="st3-t">Mise en oeuvre</h3>
-            <p id="st3-p">
-              On crée les contenus, gère vos pages réseaux et lance vos
-              campagnes publicitaires ciblées.
-            </p>
-          </div>
-          <div class="step">
-            <div class="step-num">04</div>
-            <h3 id="st4-t">Suivi & résultats</h3>
-            <p id="st4-p">
-              Rapport mensuel détaillé, ajustements de stratégie et croissance
-              continue de votre visibilité et de vos ventes.
-            </p>
+      <section class="tarifs-bg" id="tarifs">
+        <div class="section-inner">
+          <p class="section-label" id="sec4-label">Formules</p>
+          <h2 class="section-title" id="sec4-title">
+            Formules d'accompagnement
+          </h2>
+          <div class="section-bar"></div>
+          <p class="section-intro" id="sec4-intro">
+            Les tarifs sont ajustés selon le volume de contenu, les canaux à
+            gérer et le niveau d'accompagnement souhaité.
+          </p>
+          <div class="tarifs-grid">
+            <article class="tarif-card">
+              <p class="tarif-name" id="tk1-n">Starter</p>
+              <p class="tarif-price" id="tk1-p">Sur devis</p>
+              <p class="tarif-period" id="tk1-per">petite boutique</p>
+              <ul class="tarif-features">
+                <li id="tf1-1">Gestion d'une page (Instagram ou Facebook)</li>
+                <li id="tf1-2">12 publications par mois</li>
+                <li id="tf1-3">Catalogue WhatsApp</li>
+                <li id="tf1-4">Point de suivi mensuel</li>
+              </ul>
+              <a href="#contact" class="btn-ghost btn-full" id="tk1-btn"
+                >Choisir cette formule</a
+              >
+            </article>
+
+            <article class="tarif-card featured">
+              <div class="featured-badge" id="tk2-badge">Le plus demandé</div>
+              <p class="tarif-name" id="tk2-n">Boutique Pro</p>
+              <p class="tarif-price" id="tk2-p">Sur devis</p>
+              <p class="tarif-period" id="tk2-per">boutique en croissance</p>
+              <ul class="tarif-features">
+                <li id="tf2-1">Instagram, Facebook et WhatsApp</li>
+                <li id="tf2-2">20 publications et stories régulières</li>
+                <li id="tf2-3">2 reels par semaine</li>
+                <li id="tf2-4">Campagnes Meta Ads pilotées</li>
+                <li id="tf2-5">Prises de vue produit mensuelles</li>
+                <li id="tf2-6">Suivi et conseils mensuels</li>
+              </ul>
+              <a href="#contact" class="btn-gold btn-full" id="tk2-btn"
+                >Choisir cette formule</a
+              >
+            </article>
+
+            <article class="tarif-card">
+              <p class="tarif-name" id="tk3-n">Premium</p>
+              <p class="tarif-price" id="tk3-p">Sur devis</p>
+              <p class="tarif-period" id="tk3-per">boutique ambitieuse</p>
+              <ul class="tarif-features">
+                <li id="tf3-1">Tout le pack Boutique Pro</li>
+                <li id="tf3-2">Site vitrine et SEO local</li>
+                <li id="tf3-3">Catalogue ou shopping mieux structuré</li>
+                <li id="tf3-4">Plan de communication trimestriel</li>
+                <li id="tf3-5">Support prioritaire</li>
+              </ul>
+              <a href="#contact" class="btn-ghost btn-full" id="tk3-btn"
+                >Choisir cette formule</a
+              >
+            </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- TARIFS -->
-    <section class="tarifs-bg" id="tarifs">
-      <div class="section-inner">
-        <p class="section-label" id="sec4-label">Nos offres</p>
-        <h2 class="section-title" id="sec4-title">Tarifs transparents</h2>
-        <div class="section-bar"></div>
-        <p class="section-intro" id="sec4-intro">
-          Des formules adaptées à chaque boutique, quelle que soit votre taille.
-        </p>
-        <div class="tarifs-grid">
-          <div class="tarif-card">
-            <p class="tarif-name" id="tk1-n">Starter</p>
-            <p class="tarif-price" id="tk1-p">Sur devis</p>
-            <p class="tarif-period" id="tk1-per">/ mois — petite boutique</p>
-            <ul class="tarif-features">
-              <li id="tf1-1">Gestion d'une page (Insta ou FB)</li>
-              <li id="tf1-2">12 posts / mois</li>
-              <li id="tf1-3">Catalogue WhatsApp</li>
-              <li id="tf1-4">Rapport mensuel</li>
-            </ul>
-            <a href="#contact" class="btn-ghost btn-full" id="tk1-btn"
-              >Choisir</a
-            >
-          </div>
-          <div class="tarif-card featured">
-            <div class="featured-badge" id="tk2-badge">Le plus populaire</div>
-            <p class="tarif-name" id="tk2-n">Boutique Pro</p>
-            <p class="tarif-price" id="tk2-p">Sur devis</p>
-            <p class="tarif-period" id="tk2-per">
-              / mois — boutique en croissance
-            </p>
-            <ul class="tarif-features">
-              <li id="tf2-1">Instagram + Facebook + WhatsApp</li>
-              <li id="tf2-2">20 posts + stories quotidiennes</li>
-              <li id="tf2-3">2 reels / semaine</li>
-              <li id="tf2-4">Publicités Meta Ads incluses</li>
-              <li id="tf2-5">Photos produits (séance mensuelle)</li>
-              <li id="tf2-6">Rapport & conseil mensuel</li>
-            </ul>
-            <a href="#contact" class="btn-gold btn-full" id="tk2-btn"
-              >Choisir</a
-            >
-          </div>
-          <div class="tarif-card">
-            <p class="tarif-name" id="tk3-n">Premium</p>
-            <p class="tarif-price" id="tk3-p">Sur devis</p>
-            <p class="tarif-period" id="tk3-per">
-              / mois — boutique ambitieuse
-            </p>
-            <ul class="tarif-features">
-              <li id="tf3-1">Tout le pack Boutique Pro</li>
-              <li id="tf3-2">Site vitrine + SEO local</li>
-              <li id="tf3-3">Instagram Shopping activé</li>
-              <li id="tf3-4">Stratégie trimestrielle</li>
-              <li id="tf3-5">Support prioritaire 7j/7</li>
-            </ul>
-            <a href="#contact" class="btn-ghost btn-full" id="tk3-btn"
-              >Choisir</a
-            >
+      <section class="faq-bg" id="faq">
+        <div class="section-inner">
+          <p class="section-label" id="sec7-label">Questions fréquentes</p>
+          <h2 class="section-title" id="sec7-title">
+            Ce qu'il faut savoir avant de démarrer
+          </h2>
+          <div class="section-bar"></div>
+          <p class="section-intro" id="sec7-intro">
+            Les questions que les boutiques nous posent le plus souvent avant de
+            lancer un accompagnement.
+          </p>
+          <div class="faq-grid">
+            <details class="faq-item">
+              <summary id="faq1-q">
+                En combien de temps peut-on lancer l'accompagnement ?
+              </summary>
+              <p id="faq1-a">
+                Après l'audit initial, nous pouvons cadrer les priorités et
+                démarrer rapidement selon votre besoin : contenus, gestion
+                réseaux, publicités ou accompagnement global.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary id="faq2-q">
+                Travaillez-vous aussi avec de petites boutiques ?
+              </summary>
+              <p id="faq2-a">
+                Oui. Le site est pensé pour des boutiques locales qui veulent
+                mieux présenter leurs produits sans devoir construire une équipe
+                marketing complète.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary id="faq3-q">
+                Faut-il déjà avoir une présence active sur Instagram ?
+              </summary>
+              <p id="faq3-a">
+                Non. Nous pouvons repartir d'un compte existant, le remettre au
+                propre ou construire une base de contenu plus claire si votre
+                présence actuelle n'est pas encore structurée.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary id="faq4-q">
+                Peut-on commencer par un audit sans engagement ?
+              </summary>
+              <p id="faq4-a">
+                Oui. L'audit sert justement à clarifier vos priorités, éviter
+                les dépenses inutiles et décider si un accompagnement régulier
+                est le bon prochain pas.
+              </p>
+            </details>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- TÉMOIGNAGES -->
-    <section class="testi-bg" id="temoignages">
-      <div class="section-inner">
-        <p class="section-label" id="sec5-label">Ils nous font confiance</p>
-        <h2 class="section-title" id="sec5-title">Témoignages</h2>
-        <div class="section-bar"></div>
-        <div class="testi-grid">
-          <div class="testi-card">
-            <div class="testi-quote">"</div>
-            <p class="testi-text" id="t1-txt">
-              Depuis qu'Agence Chic Local gère mon Instagram, j'ai de nouvelles
-              clientes chaque semaine. Mon chiffre d'affaires a doublé en 4
-              mois. Je recommande à 100% !
-            </p>
-            <p class="testi-author">Aminata K.</p>
-            <p class="testi-role" id="t1-role">
-              Propriétaire — Boutique Kemi Mode
-            </p>
-          </div>
-          <div class="testi-card">
-            <div class="testi-quote">"</div>
-            <p class="testi-text" id="t2-txt">
-              Avant, personne ne connaissait ma boutique en dehors du quartier.
-              Maintenant des clientes viennent de partout grâce au site et aux
-              réseaux sociaux.
-            </p>
-            <p class="testi-author">Fatoumata D.</p>
-            <p class="testi-role" id="t2-role">Propriétaire — Ama Style</p>
-          </div>
-          <div class="testi-card">
-            <div class="testi-quote">"</div>
-            <p class="testi-text" id="t3-txt">
-              Le catalogue WhatsApp a tout changé pour moi. Mes clientes
-              commandent directement depuis leur téléphone. Simple, rapide et
-              très efficace !
-            </p>
-            <p class="testi-author">Serge M.</p>
-            <p class="testi-role" id="t3-role">
-              Propriétaire — Glamour Loc Accessories
-            </p>
+      <section class="testi-bg" id="temoignages">
+        <div class="section-inner">
+          <p class="section-label" id="sec5-label">Retours clients</p>
+          <h2 class="section-title" id="sec5-title">Témoignages</h2>
+          <div class="section-bar"></div>
+          <p class="section-intro" id="sec5-intro">
+            Des retours centrés sur la clarté du travail, la réactivité et
+            l'impact concret sur la présentation des boutiques.
+          </p>
+          <div class="testi-grid">
+            <article class="testi-card">
+              <div class="testi-quote">"</div>
+              <p class="testi-text" id="t1-txt">
+                Depuis que mon contenu est mieux structuré, les clientes
+                comprennent plus vite ce que je vends et j'ai davantage de
+                demandes sérieuses sur WhatsApp.
+              </p>
+              <p class="testi-author">Aminata K.</p>
+              <p class="testi-role" id="t1-role">
+                Propriétaire - Boutique Kemi Mode
+              </p>
+            </article>
+
+            <article class="testi-card">
+              <div class="testi-quote">"</div>
+              <p class="testi-text" id="t2-txt">
+                Le site me permet enfin de présenter la boutique proprement
+                quand on me cherche en ligne. Cela rassure beaucoup plus vite.
+              </p>
+              <p class="testi-author">Fatoumata D.</p>
+              <p class="testi-role" id="t2-role">Propriétaire - Ama Style</p>
+            </article>
+
+            <article class="testi-card">
+              <div class="testi-quote">"</div>
+              <p class="testi-text" id="t3-txt">
+                Les visuels produits et le catalogue m'ont aidé à répondre plus
+                vite, à mieux montrer mes pièces et à gagner en sérieux.
+              </p>
+              <p class="testi-author">Serge M.</p>
+              <p class="testi-role" id="t3-role">
+                Propriétaire - Glamour Loc Accessories
+              </p>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- CONTACT -->
-    <section class="contact-bg" id="contact">
-      <div class="section-inner">
-        <p class="section-label" id="sec6-label">Parlons de votre projet</p>
-        <h2 class="section-title" id="sec6-title">Contactez-nous</h2>
-        <div class="section-bar"></div>
-        <div class="contact-grid">
-          <div class="contact-info">
-            <h3 id="ci-title">On est là pour vous</h3>
-            <p id="ci-sub">
-              Votre boutique manque de visibilité en ligne ? Parlons-en. Audit
-              gratuit et sans engagement. Nous répondons sous 24h.
-            </p>
-            <div class="contact-detail">
-              <div class="c-icon"><i class="fab fa-whatsapp"></i></div>
-              <div>
-                <strong id="cd1-label">WhatsApp</strong>+229 01 67 98 41 10
-              </div>
-            </div>
-            <div class="contact-detail">
-              <div class="c-icon"><i class="fas fa-envelope"></i></div>
-              <div>
-                <strong id="cd2-label">Email</strong>dossouodette57@gmail.com
-              </div>
-            </div>
-            <div class="contact-detail">
-              <div class="c-icon"><i class="fab fa-instagram"></i></div>
-              <div>
-                <strong id="cd3-label">Instagram</strong
-                ><a
+      <section class="contact-bg" id="contact">
+        <div class="section-inner">
+          <p class="section-label" id="sec6-label">Parlons de votre projet</p>
+          <h2 class="section-title" id="sec6-title">Contactez-nous</h2>
+          <div class="section-bar"></div>
+          <p class="section-intro" id="sec6-intro">
+            Si votre boutique manque de clarté, de contenu régulier ou de
+            demandes qualifiées, on vous aide à remettre de l'ordre.
+          </p>
+          <div class="contact-grid">
+            <div class="contact-info">
+              <h3 id="ci-title">Parlons stratégie et visibilité</h3>
+              <p id="ci-sub">
+                Audit initial, priorités d'action et accompagnement adapté à
+                votre niveau d'avancement. Vous repartez avec une vision plus
+                nette, pas avec des promesses vagues.
+              </p>
+
+              <div class="contact-actions">
+                <a
+                  href="https://wa.me/2290167984110"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-action-link contact-action-primary"
+                  id="ca1"
+                  >Discuter sur WhatsApp</a
+                >
+                <a
                   href="https://www.instagram.com/agencechiclocal"
                   target="_blank"
-                  class="contact-link"
-                  >@agencechiclocal</a
+                  rel="noopener noreferrer"
+                  class="contact-action-link"
+                  id="ca2"
+                  >Voir Instagram</a
                 >
               </div>
-            </div>
-            <div class="contact-detail">
-              <div class="c-icon"><i class="fab fa-facebook-f"></i></div>
-              <div>
-                <strong id="cd4-label">Facebook</strong
-                ><a
-                  href="https://www.facebook.com/agencechiclocal"
-                  target="_blank"
-                  class="contact-link"
-                  >Agence Chic Local</a
-                >
+
+              <div class="contact-detail">
+                <div class="c-icon"><i class="fab fa-whatsapp"></i></div>
+                <div>
+                  <strong id="cd1-label">WhatsApp</strong>
+                  <a
+                    href="https://wa.me/2290167984110"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-link"
+                    >+229 01 67 98 41 10</a
+                  >
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <div class="c-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <strong id="cd2-label">Email</strong>
+                  <a href="mailto:dossouodette57@gmail.com" class="contact-link"
+                    >dossouodette57@gmail.com</a
+                  >
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <div class="c-icon"><i class="fab fa-instagram"></i></div>
+                <div>
+                  <strong id="cd3-label">Instagram</strong>
+                  <a
+                    href="https://www.instagram.com/agencechiclocal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-link"
+                    >@agencechiclocal</a
+                  >
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <div class="c-icon"><i class="fab fa-facebook-f"></i></div>
+                <div>
+                  <strong id="cd4-label">Facebook</strong>
+                  <a
+                    href="https://www.facebook.com/agencechiclocal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-link"
+                    >Agence Chic Local</a
+                  >
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <div class="c-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div>
+                  <strong id="cd5-label">Adresse</strong>
+                  <span id="cd5-val">Cotonou, Bénin</span>
+                </div>
               </div>
             </div>
-            <div class="contact-detail">
-              <div class="c-icon"><i class="fas fa-map-marker-alt"></i></div>
-              <div>
-                <strong id="cd5-label">Adresse</strong
-                ><span id="cd5-val">Cotonou, Bénin</span>
+
+            <form
+              id="contactForm"
+              class="contact-form-card"
+              aria-describedby="form-helper"
+            >
+              <p class="form-helper" id="form-helper">
+                Votre demande prépare un message structuré sur WhatsApp. Si
+                WhatsApp n'est pas disponible, votre application email prendra
+                le relais.
+              </p>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="f-nom" id="fl-nom"
+                    >Votre nom</label
+                  >
+                  <input
+                    type="text"
+                    id="f-nom"
+                    name="nom"
+                    autocomplete="name"
+                    placeholder="Ex : Fatou Diallo"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="f-boutique" id="fl-boutique"
+                    >Votre boutique</label
+                  >
+                  <input
+                    type="text"
+                    id="f-boutique"
+                    name="boutique"
+                    autocomplete="organization"
+                    placeholder="Nom de la boutique"
+                  />
+                </div>
               </div>
-            </div>
-          </div>
-          <form id="contactForm">
-            <div class="form-row">
+
               <div class="form-group">
-                <label class="form-label" id="fl-nom">Votre nom</label>
+                <label class="form-label" for="f-contact" id="fl-contact"
+                  >Email ou WhatsApp</label
+                >
                 <input
                   type="text"
-                  id="f-nom"
-                  placeholder="Ex : Fatou Diallo"
+                  id="f-contact"
+                  name="contact"
+                  autocomplete="email"
+                  placeholder="votre@email.com ou +229..."
                   required
                 />
               </div>
-              <div class="form-group">
-                <label class="form-label" id="fl-boutique"
-                  >Votre boutique</label
-                >
-                <input
-                  type="text"
-                  id="f-boutique"
-                  placeholder="Nom de la boutique"
-                />
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label" id="fl-contact"
-                >Email ou WhatsApp</label
-              >
-              <input
-                type="text"
-                id="f-contact"
-                placeholder="votre@email.com ou +229..."
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label class="form-label" id="fl-service">Service souhaité</label>
-              <select id="f-service">
-                <option>Réseaux sociaux (Instagram / Facebook)</option>
-                <option>Contenus visuels (photos & vidéos)</option>
-                <option>Publicités Meta Ads</option>
-                <option>Site vitrine & SEO</option>
-                <option>Catalogue WhatsApp</option>
-                <option>Pack complet Boutique Pro</option>
-                <option>Je ne sais pas encore</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label" id="fl-msg">Votre message</label>
-              <textarea
-                id="f-msg"
-                placeholder="Décrivez votre boutique, vos produits et ce que vous souhaitez accomplir..."
-                required
-              ></textarea>
-            </div>
-            <button type="submit" class="btn-gold btn-full" id="f-btn">
-              Envoyer ma demande
-            </button>
-            <div class="form-success" id="formSuccess">
-              ✓ &nbsp; Merci ! Nous vous recontactons dans les 24 heures.
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
 
-    <!-- FOOTER -->
+              <div class="form-group">
+                <label class="form-label" for="f-service" id="fl-service"
+                  >Service souhaité</label
+                >
+                <select id="f-service" name="service" required>
+                  <option value="" disabled selected id="f-service-placeholder">
+                    Choisissez un service
+                  </option>
+                  <option>Réseaux sociaux (Instagram / Facebook)</option>
+                  <option>Contenus visuels (photos et vidéos)</option>
+                  <option>Publicités Meta Ads</option>
+                  <option>Site vitrine et SEO local</option>
+                  <option>Catalogue WhatsApp</option>
+                  <option>Pack complet Boutique Pro</option>
+                  <option>Je ne sais pas encore</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="f-msg" id="fl-msg"
+                  >Votre message</label
+                >
+                <textarea
+                  id="f-msg"
+                  name="message"
+                  placeholder="Décrivez votre boutique, vos produits et ce que vous souhaitez améliorer."
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn-gold btn-full" id="f-btn">
+                Préparer mon message
+              </button>
+              <div class="form-success" id="formSuccess" aria-live="polite">
+                Votre message est prêt. WhatsApp va s'ouvrir.
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <footer>
       <div class="footer-inner">
         <div class="footer-left">
-          <div class="logo footer-logo">
-            <div class="logo-box footer-logo-box">ACL</div>
+          <a
+            href="#accueil"
+            class="logo footer-logo"
+            id="footerLogo"
+            aria-label="Retour en haut"
+          >
+            <span class="logo-box footer-logo-box">
+              <img
+                src="images/logo.jpeg"
+                alt="Logo Agence Chic Local"
+                class="logo-mark"
+                width="48"
+                height="48"
+              />
+            </span>
             <span class="logo-name footer-logo-name">Agence Chic Local</span>
-          </div>
+          </a>
+          <p class="footer-tagline" id="footer-tagline">
+            Communication digitale pour boutiques de mode et accessoires à
+            Cotonou.
+          </p>
           <p id="footer-copy">
-            © 2026 Agence Chic Local — Tous droits réservés
+            © 2026 Agence Chic Local - Tous droits réservés
           </p>
         </div>
+
         <div class="footer-links">
           <a href="#services" id="fl1">Services</a>
           <a href="#portfolio" id="fl2">Portfolio</a>
           <a href="#tarifs" id="fl3">Tarifs</a>
-          <a href="#contact" id="fl4">Contact</a>
+          <a href="#faq" id="fl4">FAQ</a>
+          <a href="#contact" id="fl5">Contact</a>
         </div>
+
         <div class="footer-socials">
           <a
-            href="#"
+            href="https://www.instagram.com/agencechiclocal"
             target="_blank"
+            rel="noopener noreferrer"
             class="soc-btn"
             aria-label="Instagram"
             ><i class="fab fa-instagram"></i
           ></a>
           <a
-            href="#"
+            href="https://www.facebook.com/agencechiclocal"
             target="_blank"
+            rel="noopener noreferrer"
             class="soc-btn"
             aria-label="Facebook"
             ><i class="fab fa-facebook-f"></i
@@ -634,6 +824,7 @@
           <a
             href="https://wa.me/2290167984110"
             target="_blank"
+            rel="noopener noreferrer"
             class="soc-btn"
             aria-label="WhatsApp"
             ><i class="fab fa-whatsapp"></i
@@ -642,14 +833,15 @@
       </div>
     </footer>
 
-    <!-- WhatsApp float -->
     <a
       href="https://wa.me/2290167984110"
       class="wa-float"
       target="_blank"
-      aria-label="WhatsApp"
-      ><i class="fab fa-whatsapp"></i
-    ></a>
+      rel="noopener noreferrer"
+      aria-label="Discuter sur WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script src="script.js" defer></script>
   </body>
