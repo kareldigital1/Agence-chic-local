@@ -335,9 +335,15 @@ const contentById = {
     fr: "Communication digitale pour boutiques de mode et accessoires à Cotonou.",
     en: "Digital communication for fashion and accessories boutiques in Cotonou.",
   },
+  "footer-links-title": { fr: "Liens rapides", en: "Quick links" },
+  "footer-socials-title": { fr: "Suivez-nous", en: "Follow us" },
   "footer-copy": {
-    fr: "© 2026 Agence Chic Local - Tous droits réservés",
-    en: "© 2026 Agence Chic Local - All rights reserved",
+    fr: "© 2026 Agence Chic Local. Tous droits réservés.",
+    en: "© 2026 Agence Chic Local. All rights reserved.",
+  },
+  "footer-credit": {
+    fr: "Plateforme corrigée par <strong>KStalker</strong>",
+    en: "Platform refined by <strong>KStalker</strong>",
   },
   fl1: { fr: "Services", en: "Services" },
   fl2: { fr: "Portfolio", en: "Portfolio" },
@@ -410,10 +416,12 @@ const uiText = {
     switchLanguage: "Basculer le site en anglais",
     navHome: "Accueil Agence Chic Local",
     footerHome: "Retour en haut",
+    backToTop: "Revenir complètement en haut",
     mobileMenu: "Navigation mobile",
     openMenu: "Ouvrir le menu",
     closeMenu: "Fermer le menu",
-    successWhatsapp: "Votre message est prêt. WhatsApp va s'ouvrir.",
+    successWhatsapp:
+      "Votre message est prêt. Autorisez l'ouverture de WhatsApp si votre navigateur le demande.",
     successEmail:
       "WhatsApp n'est pas disponible ici. Votre application email va s'ouvrir.",
     notProvided: "Non renseigné",
@@ -431,10 +439,12 @@ const uiText = {
     switchLanguage: "Switch the site to French",
     navHome: "Agence Chic Local home",
     footerHome: "Back to top",
+    backToTop: "Back to the top",
     mobileMenu: "Mobile navigation",
     openMenu: "Open menu",
     closeMenu: "Close menu",
-    successWhatsapp: "Your message is ready. WhatsApp will open.",
+    successWhatsapp:
+      "Your message is ready. Allow WhatsApp to open if your browser asks.",
     successEmail:
       "WhatsApp is not available here. Your email application will open.",
     notProvided: "Not provided",
@@ -458,6 +468,12 @@ const formSuccess = document.getElementById("formSuccess");
 const navLogo = document.getElementById("navLogo");
 const footerLogo = document.getElementById("footerLogo");
 const serviceSelect = document.getElementById("f-service");
+const backToTopButton = document.getElementById("backToTop");
+const whatsappLinks = Array.from(
+  document.querySelectorAll(
+    `a[href*="wa.me/${WHATSAPP_NUMBER}"], a[href*="api.whatsapp.com/send"], a[href*="web.whatsapp.com/send"]`,
+  ),
+);
 
 const descriptionMeta = document.querySelector('meta[name="description"]');
 const ogTitleMeta = document.querySelector('meta[property="og:title"]');
@@ -472,16 +488,20 @@ const twitterDescriptionMeta = document.querySelector(
 langButton?.addEventListener("click", toggleLang);
 hamburgerButton?.addEventListener("click", toggleMenu);
 contactForm?.addEventListener("submit", sendForm);
+backToTopButton?.addEventListener("click", scrollToTop);
 mobileMenu?.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", closeMenu);
 });
 
 document.addEventListener("keydown", handleKeydown);
 document.addEventListener("click", handleDocumentClick);
+window.addEventListener("scroll", handleScroll, { passive: true });
 window.addEventListener("resize", handleResize);
 
 applyTranslations();
 updateMenuState(false);
+syncWhatsAppLinks();
+handleScroll();
 
 function toggleLang() {
   lang = lang === "fr" ? "en" : "fr";
@@ -556,6 +576,7 @@ function updateAccessibilityLabels() {
   navLogo?.setAttribute("aria-label", uiText[lang].navHome);
   footerLogo?.setAttribute("aria-label", uiText[lang].footerHome);
   mobileMenu?.setAttribute("aria-label", uiText[lang].mobileMenu);
+  backToTopButton?.setAttribute("aria-label", uiText[lang].backToTop);
   updateHamburgerLabel();
 }
 
@@ -609,24 +630,16 @@ function sendForm(event) {
     message || notProvided,
   ].join("\n");
 
-  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(structuredMessage)}`;
   const emailSubject = encodeURIComponent(
     `${uiText[lang].subject} - ${service}`,
   );
   const emailBody = encodeURIComponent(structuredMessage);
   const mailtoUrl = `mailto:${CONTACT_EMAIL}?subject=${emailSubject}&body=${emailBody}`;
 
-  let whatsappWindow = null;
-
   try {
-    whatsappWindow = window.open(whatsappUrl, "_blank", "noopener,noreferrer");
-  } catch (error) {
-    whatsappWindow = null;
-  }
-
-  if (whatsappWindow) {
+    openWhatsApp(structuredMessage);
     showFormFeedback("whatsapp");
-  } else {
+  } catch (error) {
     window.location.href = mailtoUrl;
     showFormFeedback("email");
   }
@@ -708,4 +721,49 @@ function handleResize() {
   if (window.innerWidth > 768) {
     closeMenu();
   }
+}
+
+function syncWhatsAppLinks() {
+  const appUrl = getWhatsAppAppUrl();
+
+  whatsappLinks.forEach((link) => {
+    link.href = appUrl;
+    link.removeAttribute("target");
+    link.removeAttribute("rel");
+  });
+}
+
+function buildWhatsAppQuery(message = "") {
+  const params = new URLSearchParams({
+    phone: WHATSAPP_NUMBER,
+  });
+
+  if (message) {
+    params.set("text", message);
+  }
+
+  return params.toString();
+}
+
+function getWhatsAppAppUrl(message = "") {
+  return `whatsapp://send?${buildWhatsAppQuery(message)}`;
+}
+
+function openWhatsApp(message = "") {
+  window.location.href = getWhatsAppAppUrl(message);
+}
+
+function handleScroll() {
+  if (!backToTopButton) {
+    return;
+  }
+
+  backToTopButton.classList.toggle("visible", window.scrollY > 420);
+}
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 }
