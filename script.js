@@ -1,5 +1,5 @@
 const WHATSAPP_NUMBER = "2290167984110";
-const CONTACT_EMAIL = "dossouodette57@gmail.com";
+const CONTACT_EMAIL = "chiclocalagency@gmail.com";
 
 let lang = "fr";
 
@@ -385,8 +385,8 @@ const inputPlaceholders = {
     en: "Boutique name",
   },
   "f-contact": {
-    fr: "votre@email.com ou +229...",
-    en: "your@email.com or +229...",
+    fr: "chiclocalagency@gmail.com ou +229...",
+    en: "chiclocalagency@gmail.com or +229...",
   },
   "f-msg": {
     fr: "Décrivez votre boutique, vos produits et ce que vous souhaitez améliorer.",
