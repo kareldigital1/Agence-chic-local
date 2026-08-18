@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://https://agence-chic-local.onrender.com//sitemap.xml
+Sitemap: https://agence-chic-local.onrender.com/sitemap.xml
